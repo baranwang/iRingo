@@ -222,7 +222,7 @@ function outputData(api, stations, obs) {
                     weather.air_quality.metadata.longitude = obs.city.geo[0];
                     weather.air_quality.metadata.provider_name = obs.attributions[obs.attributions.length - 1].name;
                     weather.air_quality.metadata.expire_time = convertTime(new Date(obs.time.v), 'add-1h-floor', api);
-                    weather.air_quality.metadata.provider_logo = "https:\/\/waqi.info\/images\/logo.png";
+                    weather.air_quality.metadata.provider_logo = "https:\/\/raw.githubusercontent.com\/baranwang\/iRingo\/main\/image\/waqi.info.logo.png";
                     weather.air_quality.metadata.read_time = convertTime(new Date(), 'remain', api);
                     weather.air_quality.metadata.latitude = obs.city.geo[1];
                     //weather.air_quality.metadata.version = "";
@@ -274,7 +274,7 @@ function outputData(api, stations, obs) {
                     weather.airQuality.pollutants["PM2.5"] = { "name": "PM2.5", "amount": obs.iaqi.pm25?.v || -1, "unit": "microgramsPerM3" };
                     weather.airQuality.pollutants.PM10 = { "name": "PM10", "amount": obs.iaqi.pm10?.v || -1, "unit": "microgramsPerM3" };
                     weather.airQuality.metadata.longitude = obs.city.geo[0];
-                    weather.airQuality.metadata.providerLogo = "https:\/\/waqi.info\/images\/logo.png";
+                    weather.airQuality.metadata.providerLogo = "https:\/\/raw.githubusercontent.com\/baranwang\/iRingo\/main\/image\/waqi.info.logo.png";
                     weather.airQuality.metadata.providerName = obs.attributions[obs.attributions.length - 1].name;
                     weather.airQuality.metadata.expireTime = convertTime(new Date(obs.time.iso), 'add-1h-floor', api);
                     weather.airQuality.metadata.language ? weather.airQuality.metadata.language : weather.currentWeather.metadata.language;
